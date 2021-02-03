@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"> 
+        <link href="assets/Vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- <link src="assets/Vendors/bootstrap/js/bootstrap.js" rel="js"> -->
+    <link href="assets/Vendors/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/Custome/mycss.css" rel="stylesheet">
+    <!-- <link src="assets/Vendors/jquery/jquery.js" rel="js"> -->
+     <style>
+             /* Rotating words Start csss */
+             .card-Boddy-rw-words{
+                z-index:2;
+                position: relative;
+                top: 160px;
+                font-weight: lighter;
+                font-size: 20px;
+                
+            }
+             .rw-words {
+                z-index: 2;
+                position: relative;
+                top: 100px;
+                font-weight: 600;
+                font-size: 35px;
+                /* left: 550px; */
+                white-space: nowrap;
+                }
+
+.rw-words span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0.625rem;
+}
+
+@keyframes rotateWords {
+  0% {
+    opacity: 1;
+    width: 0px;
+  }
+  15% {
+    opacity: 1;
+    width: 100%;
+  }
+  18% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotateLastWord {
+  0% {
+    opacity: 1;
+    width: 0px;
+  }
+  15% {
+    opacity: 1;
+    width: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.rw-words span {
+  animation: rotateWords 18s;
+}
+
+.rw-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.rw-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.rw-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.rw-words span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.rw-words span:nth-child(6) {
+  animation: rotateLastWord 18s forwards;
+  animation-delay: 15s;
+}
+
+             /* Rotating word end csss */
+               .LeftBackgroud{
+                            position: relative;
+                            left: 0px;
+                            top: -130px;
+                            background-image: url("https://instaread.co/images/hero.jpg");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            margin-top: 100px;
+                            width: 530px;  
+                            height: 530px;
+                           
+
+                    }
+                   .CoffeeBackgroud
+                   { 
+                            position: relative;
+                            left: 650px;
+                            top: -360px;
+                            background-image: url("https://instaread.co//images/hero-coffee.jpg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-top: 100px;
+                            width: 100px;  
+                            height: 100px;
+                                   
+                   }
+                   .PlantBackgroud
+                   {
+                    position: relative;
+                            left: 920px;
+                            top: -1000px;
+                            background-image: url("https://instaread.co/images/hero-plant.jpg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-top: 100px;
+                            width: 200px;  
+                            height: 200px;
+                           
+                } 
+               .last-Background{
+                            position: relative;
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            background-image: url("https://instaread.co/images/home-device-group-text.jpg");
+                            background-repeat: no-repeat;
+                        margin-top:     100px;
+                            background-size: cover;
+                            background-size:  100% 100%; 
+                            width: 800px;  
+                            height: 500px;
+                        }
+                        .mid-Background{
+                        
+                            position: relative;
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            background-image: url("https://instaread.co/images/home-iphonex-read-and-listen-text.jpg");
+                            background-repeat: no-repeat;
+                        margin-top: 400px;
+                            background-size: cover;
+                            background-size:  100% 100%; 
+                            width: 740px;  
+                            height: 530px;
+                        
+                        }
+
+               .nav-link:hover{
+                 text-decoration: underline;
+             }
+             .aaHover:hover
+             {
+                text-decoration: underline;  
+             }
+
+             /* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+        </style>
+    </head>
+    <body >
+
+            <!-- 
+
+                    HEADER
+                    HEADER
+                    HEADER
+                    HEADER
+                    HEADER
+                    HEADER
+
+             -->        
+        <header style="position: fixed;z-index: 3; top: 0px; background-color: white; width: 100%;">
+            <nav class=" navbar navbar-dark " style="padding: 20px; border-bottom: 1px solid gray;">
+                <div class=" navbar-header">
+                    <a href="#" class="navbar-nav nav-item nav-link text-dark"><img src="https://instaread.co/images/instaread_logo_grey.svg" alt="InstaRead" width="110px" height="28px"></a>
+                </div>
+                <ul class="nav navbar-nav" >
+                    <div class="row "  >
+                        <li class="col-3 nav-item " style="text-align: center;">
+                            <a href="#registrationform"class="nav-link" style="color:black; display: inline;">Discover</a>
+                        </li> 
+                        <li class="col-3 nav-item " style="text-align: center;">
+                            <a href="#courses"class="nav-link" style="color:black; display: inline;">Search</a>
+                        </li> 
+                        <li class="col-4 nav-item" style="text-align: center;">
+                            <a href="#footer" class="nav-link "style="color:#0085e6; display: inline;">TryInstaread</a>
+                        </li>
+                        <li class="col-1 nav-item" style="text-align: center;">
+                            <a href="#footer" class="nav-link"style="color:black; display: inline;border-radius: 10px;">Login</a>
+                        </li>
+                        <li class="col-1"></li>
+                    </div>
+                </ul>
+            </nav>
+               
+        </header>
+
+        <!-- 
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+            Heroleft Coffee Plant
+         -->
+        <div style="background-color: rgb(249, 249, 249); padding-bottom: -1200px; margin-bottom: -100px;">
+            <div class="container-fluid" style="margin-top: -15px; padding-bottom: -300px;">
+                <div class="container row cardAbove">
+                    <div class="col-7"></div>
+                    <div class="col-5">
+                        <div class="card">
+                        <div class="rw-words" >
+                                <span>Stay Curious</span>
+                                <span>Get Smarter</span>
+                                <span>Be Entertained</span>
+                                <span>Find Inspiration</span>
+                                <span>Save Time</span>
+                                <span>Stay Curious</span>
+                            </div>
+                        </div>
+                        <div class="card-Boddy-rw-words">
+                                <p style="font-size: 19px;">Enjoy access to bestselling book summaries<br> and premium 
+                                    content from our partners, all<br> available in 15-minute audio or text segments.<br>
+                                    </p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="mainBackground">
+                    <div class="LeftBackgroud">
+                        <div style="position: relative; top: 105px; left: 203px;">
+                            <a href="#"><img class="shadow" style="transform: rotatez(-23deg);" src="https://d1cm35kbp068hs.cloudfront.net/sjtootlowe/cover.jpg" width="50px" height="70px"></a>
+                        </div>
+                        <div style="position: relative; top: 302px; left: 443px;">
+                            <a href="#"><img class="shadow" style="transform: rotatez(+11deg);" src="https://d1cm35kbp068hs.cloudfront.net/xf7cenkg8q/cover.jpg" width="50px" height="75px"></a>
+                        </div>
+
+                    </div>
+                    <div class="CoffeeBackgroud">
+                    </div>
+                    <div class="PlantBackgroud">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            Three columns 
+            Three columns 
+            Three columns 
+            Three columns 
+            Three columns 
+            Three columns
+         -->
+         <div class="container"  style="position: relative; top: 120px; text-align: center; margin-top: 75px; margin-bottom: 75px;">
+             <div class="row">
+                <div class="col-4">
+                    <img src="https://instaread.co/images/get_smarter.jpg" width="70px" height="70px"><br><Br>
+                    <h4>Get Smarter</h4>
+                    <p>Instantly unlock the knowledge contained in the world's best books.</p>
+                </div>
+                <div class="col-4" style="border-left: 1px solid grey ; border-right:
+                1px solid grey;">
+                    <img src="https://instaread.co/images/find_inspiration.jpg" width="90px" height="90px"><br><Br>
+                        <h4>Find Inspiration</h4>
+                        <p>Get the best ideas from leading business mavericks, health gurus, political pundits, and trailblazing scientists.</p>    
+                </div>
+                <div class="col-4">
+                    <img src="https://instaread.co/images/on_the_go.jpg" width="80px" height="80px"><br><Br>
+                        <h4>On the Go</h4>
+                        <p>Eyes on the road? Hands on the barbells? No problem: all Instareads are converted to audio for your listening pleasure.</p>    
+                </div>
+             </div>
+
+         </div>
+        <!-- 
+
+                    Mobile table Desktop
+                    Mobile table Desktop
+                    Mobile table Desktop
+                    Mobile table Desktop
+                    Mobile table Desktop
+                    Mobile table Desktop
+             --> 
+             <h3 style="position: relative; top: 120px; left: 30px; text-align: center; font-size: 30px;"><b>Available in audio & text formats.</b></h3>
+             <div class="container">
+                <div  class="mid-Background" >
+                    <div style="position: absolute; top: 120px; left: 505px;">
+                        <a href="#"><img class="shadow-lg" style="border-radius: 6px;" src="https://d1cm35kbp068hs.cloudfront.net/wu60ia8ymm/cover.jpg" width="140px" height="205px"></a>
+                    </div>
+                       
+                </div>
+             </div>   
+             <h3 style="position: relative; top: -190px; text-align: center; font-size: 30px;"><b>Mobile, tablet, and desktop.</b> Unlimited access on<br> desktop, android-optimized mobile-web-app or iOS app.</h3>
+             <div class="container">
+            <div  class="last-Background ">
+                <div style="position: absolute; top: 100px; left: 360px;">
+                    <a href="#"><img class="shadow-lg" style="border-radius: 6px;" src="https://d1cm35kbp068hs.cloudfront.net/he72xxcgr9/cover.jpg" width="94px" height="155px"></a>
+                </div>
+                <div style="position: absolute; top: 300px; left: 685px;">
+                    <a href="#"><img class="shadow-lg" style="border-radius: 6px;" src="https://d1cm35kbp068hs.cloudfront.net/u71xxrlrqn/cover.jpg" width="55px" height="90px"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 
+
+                    More Tahn 10000 Titles
+                    More Tahn 10000 Titles
+                    More Tahn 10000 Titles
+                    More Tahn 10000 Titles
+                    More Tahn 10000 Titles
+                    More Tahn 10000 Titles
+
+             -->  
+             <div class="container">
+                <h4 style="text-align: center; margin-bottom: 50px; font-size: 25px;"><b>More than 1,000 titles.</b> Let us<br> guide you through the world's<br> wisdom.</h4>
+             <div class="row" style="text-align: left; border-radius: 10px;" >
+                <div style="width: 20%;">
+                    <img class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/2tb4d34qmj/cover.jpg" width="150px" height="230px"><br><br>
+                   <div class="aaHover" ><a style="color: black; text-decoration: none;" href="#">The Ethical Slut</a></div>
+                   <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Janet W. Hardy an...</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/blwjy79kjq/cover.jpg"  width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black;  text-decoration: none;" href="#">Profit First</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Mike Michalowicz</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/60r6fjw245/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">How to Talk to Anyone...</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Leil Lowndes</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/82wd9t8ow0/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">The 8th Habit</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Stephen R. Covey</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/fnrx47e93u/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">The 8th Habit</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Stephen R. Covey</div></a>
+                </div>
+             </div>
+             <div class="row" style="text-align: left; border-radius: 10px; margin-top: 50px;" >
+                <div style="width: 20%;">
+                    <img class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/459hqsvkcb/cover.jpg" width="150px" height="230px"><br><br>
+                   <div class="aaHover" ><a style="color: black; text-decoration: none;" href="#">How to Lead</a></div>
+                   <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Dave Rubenstein</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/t6yso21r29/cover.jpg"  width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black;  text-decoration: none;" href="#">Your Next Five Moves</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Patrick Bet-David</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/1wyq6qnb46/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">Never Chase Me...</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Bruce Bryans</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/qfidgm63nm/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">TThe Way of the Superi</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">David Deida</div></a>
+                </div>
+                <div style="width: 20%;">
+                    <img  class="shadow" style=" border-radius: 10px;" src="https://d1cm35kbp068hs.cloudfront.net/an43ma22e7/cover.jpg" width="150px" height="230px"><br><br>
+                    <div class="aaHover" ><a class="aaHover" style="color: black; text-decoration: none;" href="#">Burnout</a></div>
+                    <div class="aaHover" ><a class="aaHover" style="color: grey; text-decoration: none;" href="#">Emily Nagoski and Ameli</div></a>
+                </div>
+             </div>
+            
+            </div>    
+             
+        <!-- 
+
+                    CATEGORIES
+                    CATEGORIES
+                    CATEGORIES
+                    CATEGORIES
+                    CATEGORIES
+                    CATEGORIES
+
+             -->        
+        <div class="container-fluid" style="margin-top: 100px; ">
+            <h4 style="text-align: center; margin-bottom: 50px;"><b>Categories.</b> A broad range of<br> categories from which to choose.</h4>
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="container col-4 " style="text-align: center; border-left: grey 1px solid;">
+                    <img src="https://instaread.co/images/business_economics.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Business & Economics</h2><br>
+                    <p >Cash in on advice from finance experts and entrepreneurs.    </p>
+                    <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;" class="fa fa-arrow-right text-primary"></i></p>
+                </div>
+                <div class="container col-4 " style="text-align: center; border-left: 1px solid grey; border-right: 1px solid grey;">
+                    <img src="https://instaread.co/images/politics.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Politics</h2><br>
+                <p >Get the lowdown on gossip from the Beltway and beyond. </p>
+                <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;" class="fa fa-arrow-right text-primary"></i></p>
+                </div>
+                <div class="container col-4" style="text-align: center;">
+                    <img src="https://instaread.co/images/social_sciences.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Social Sciences</h2><br>
+                    <p >Understanding human behavior has never been easier.</p>
+                    <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;"  class="fa fa-arrow-right text-primary"></i></p>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="margin-top: 25px;">
+                <div class="container col-4 " style="text-align: center; border-left: grey 1px solid;">
+                    <img src="https://instaread.co/images/self_help.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Business & Economics</h2><br>
+                    <p >Cash in on advice from finance experts and entrepreneurs.    </p>
+                    <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;" class=" fa fa-arrow-right text-primary"></i></p>
+                </div>
+                <div class="container col-4 " style="text-align: center;  border-left: 1px solid grey; border-right: 1px solid grey;"">
+                    <img src="https://instaread.co/images/history.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Politics</h2><br>
+                    <p >Get the lowdown on gossip from the Beltway and beyond. </p>
+                    <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;" class=" fa fa-arrow-right text-primary"></i></p>
+                </div>
+                <div class="container col-4" style="text-align: center;">
+                    <img src="https://instaread.co/images/health_fitness.png" rel="Business and economics" width="80px" height="80px">
+                    <h2 style="margin-top: 20px;">Social Sciences</h2><br>
+                    <p >Understanding human behavior has never been easier.</p>
+                    <p style="padding-top: 10px; transform: scale(1.1); font-weight: lighter;" class="text-primary">Explore <i style="padding-left: 10px;" class="fa fa-arrow-right text-primary"></i></p>
+                </div>
+            </div>
+            
+        </div>
+
+           <!--
+                            Forbes
+                            cnet
+                            Mashable
+                            TNW
+             -->
+        <div class="container bg-light" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-2" style="padding: 20px;">
+                    <img src="https://instaread.co/images/featured_forbes.svg" width="100px" height="80px">
+                </div>
+                <div class="col-2"  style="padding: 20px;">
+                    <img src="https://instaread.co/images/featured_cnet.svg" width="100px" height="80px">
+                </div>
+                <div class="col-2"  style="padding: 20px;">
+                    <img src="https://instaread.co/images/featured_mashable.svg" width="100px" height="80px">
+                </div>
+                <div class="col-2"  style="padding: 20px;">
+                    <img src="https://instaread.co/images/featured_tnw.svg" width="100px" height="80px">
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        
+        <!-- 
+                INSTAREAD REVIEWS
+                INSTAREAD REVIEWS
+                INSTAREAD REVIEWS
+                INSTAREAD REVIEWS
+                INSTAREAD REVIEWS
+                INSTAREAD REVIEWS
+         -->
+            
+            <div class="slideshow-container bg-light" style="margin-top: 50px; text-align: center;">
+                <h3 style="text-align:center; font-size: 30px; font-weight: normal;"><b style="font-weight: bolder;">Used by millions.</b>People love Instaread.</h3>
+                <div class="mySlides">
+                    <div class="row">
+                        <div class="col-4" style="padding: 20px;">
+                            <p>"I love it so much!"<br><b style="float: right;">- Sergey Levchuk</b></p>
+                        </div>
+                        <div class="col-4" style=" padding: 20px;">
+                            <p>"Impressive variety of books to choose from! Each selection provides the reader with a thorough overview, highlighting the key takeaways the book provides. Great app for anyone that loves to read!"<br><b style="float: right;">- pkmaurer</b></p>
+                        </div>
+                        <div class="col-4" style="  padding: 20px;">
+                            <p>"This is a great way to learn more every day."<br><b style="float: right;">- Alexmarlowe</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <div class="row" >
+                        <div class="col-4" style="padding: 20px;">
+                            <p>"I loveggggggg it so much!"<br><b style="float: right;">- Sergey Levchuk</b></p>
+                        </div>
+                        <div class="col-4" style=" padding: 20px;">
+                            <p>"Impressivegggggggggggg variety of books to choose from! Each selection provides the reader with a thorough overview, highlighting the key takeaways the book provides. Great app for anyone that loves to read!"<br><b style="float: right;">- pkmaurer</b></p>
+                        </div>
+                        <div class="col-4" style="  padding: 20px;">
+                            <p>"Thisgggg is a great way to learn more every day."<br><b style="float: right;">- Alexmarlowe</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <div class="row" >
+                        <div class="col-4" style="padding: 20px;">
+                            <p>"I lovesfgsg it so much!"<br><b style="float: right;">- Sergey Levchuk</b></p>
+                        </div>
+                        <div class="col-4" style=" padding: 20px;">
+                            <p>"Impressivedgbsdg variety of books to choose from! Each selection provides the reader with a thorough overview, highlighting the key takeaways the book provides. Great app for anyone that loves to read!"<br><b style="float: right;">- pkmaurer</b></p>
+                        </div>
+                        <div class="col-4" style="  padding: 20px;">
+                            <p>"This is a great way to learn more every day."<br><b style="float: right;">- Alexmarlowe</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-primary prev" style="border-radius: 50%; position: relative; top: -250px;"  onclick="plusSlides(-1)">❮</a>
+            <a class="btn btn-primary next" style="float: right; border-radius: 50%;  position: relative; top: -250px;" onclick="plusSlides(1)">❯</a>    
+        
+         <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+            <!-- 
+                    TRY INSTAREAD
+                    TRY INSTAREAD
+                    TRY INSTAREAD
+                    TRY INSTAREAD
+                    TRY INSTAREAD
+                    TRY INSTAREAD
+             -->
+       
+
+            <div class="container-fluid row" style="margin: 20px 0 20px 0;">   
+                <div class="col-2">
+                    <img src="https://instaread.co/images/get-started.png" width="90px" height="90px">
+                </div>
+                <div class="col-5" style="padding-top: 15px;">
+                    <h5 style="font-size: 20px;"><b>Get Started.</b>Instaread is a special place on the planet where you can learn</h5>
+                </div>
+                <div class="col-4">
+                    <button style="float: right; margin-top: 40px; transform: scale(1.4);" class="btn btn-primary">Try Instaread</button>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <!-- 
+
+                    FOOTER
+                    FOOTER
+                    FOOTER
+                    FOOTER
+                    FOOTER
+                    FOOTER
+             -->
+             
+        <footer class="container-fluid bg-light text-dark" style="position: relative;bottom: 0; height: max-content; padding-top: 30px; padding-bottom: 30px; margin-top: 100px;">
+            <div class="row text-dark">
+                <hr>    <div style="width: 33%;">
+                    <h4>Get Smarter in Minutes.</h4>
+                        <h6 style="font-weight: normal; padding: 5px;">Thorugh audio & text formats.</h6>
+                    <div style="margin-top: 450px;">
+                        <div style="text-align: center; color: grey; font-weight: 500;">
+                                <a style="font-size: 20px;">Terms Of Services</a>  |  <a style="font-size: 20px;">Privacy Policy</a>
+                                <p style="font-size: 14px; padding-top: 10px;">&copy; Instaread 2020.All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:22%">
+                    <h4 style="text-align: center;">Categories</h4>
+                    <div style="text-align: center; text-decoration: none;">
+                        <a  style=" color: grey; text-decoration: none;"  href="#"><h6 class="aaHover" style="padding-top: 10px;">New</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Popular</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Business & Economics</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Self Help</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Politics</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">The New York times</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Harverd Business revenue</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Instaread Originals</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Health & Fitness</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Fiction</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Daily Insights</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Science</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Religion</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Sports & Recreation</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Biographies</h6></a>
+                    </div>
+                </div>
+                <div class="" style="width: 20%;">
+                    <h4 style="text-align: center;">Company</h4>
+                    <div style="text-align: center; text-decoration: none;">
+                        <a  style=" color: grey; text-decoration: none;"  href="#"><h6 class="aaHover" style="padding-top: 11px;">Help & Contact</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Teams</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Articles</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">The Nuggets</h6></a>
+                        <a  style=" color: grey; text-decoration: none;" href="#"><h6 class="aaHover" style="padding-top: 11px;">Subscription FAQ's</h6></a>
+                    </div>
+                </div>
+                <div class="container" style="width: 25%; text-align: center;">
+                    <div class="row" style=" margin-top: 30px;">
+                        <div class="col-2"></div>
+                        <div class="col-3" style=" transform: scale(2.2);">
+                            <a href="#"><i class="footer-icon clear-margin-top fa fa-twitter-square"></i></a>
+                        </div>
+                        <div class="col-3" style=" transform: scale(2.2);">
+                            <a href="#" ><i class="footer-icon clear-margin-top fa fa-facebook"></i></a>
+                        </div>
+                        <div class="col-2" style="transform: scale(2.2);">
+                            <a href="#" ><i class="footer-icon clear-margin-top fa fa-instagram"></i></a>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div  style="margin-top: 50px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png" width="135px" height="40px" style="margin-left: 90px;">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="155px" height="60px" style="margin-left: 90px;"> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
